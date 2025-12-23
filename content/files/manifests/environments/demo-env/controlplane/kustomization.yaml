@@ -13,10 +13,13 @@ patches:
     patch: |-
       - op: replace
         path: /metadata/name
-        value: "control-plane-cluster-jpvcx-1"
+        value: "control-plane-cluster-jrf5k-1"
       - op: replace
         path: /spec/nodeSelector/kubernetes.io~1hostname
-        value: "control-plane-cluster-jpvcx-1"
+        value: "control-plane-cluster-jrf5k-1"
+      - op: replace
+        path: /spec/desiredState/interfaces/3/ipv4/address/0/ip
+        value: "1192.168.10.176"
 
   - target:
       group: nmstate.io
@@ -26,10 +29,13 @@ patches:
     patch: |-
       - op: replace
         path: /metadata/name
-        value: "control-plane-cluster-jpvcx-2"
+        value: "control-plane-cluster-jrf5k-2"
       - op: replace
         path: /spec/nodeSelector/kubernetes.io~1hostname
-        value: "control-plane-cluster-jpvcx-2"
+        value: "control-plane-cluster-jrf5k-2"
+      - op: replace
+        path: /spec/desiredState/interfaces/3/ipv4/address/0/ip
+        value: "192.168.10.177"
 
   - target:
       group: nmstate.io
@@ -39,10 +45,13 @@ patches:
     patch: |-
       - op: replace
         path: /metadata/name
-        value: "control-plane-cluster-jpvcx-3"
+        value: "control-plane-cluster-jrf5k-3"
       - op: replace
         path: /spec/nodeSelector/kubernetes.io~1hostname
-        value: "control-plane-cluster-jpvcx-3"
+        value: "control-plane-cluster-jrf5k-3"
+      - op: replace
+        path: /spec/desiredState/interfaces/3/ipv4/address/0/ip
+        value: "192.168.10.178"
 
   - target:
       kind: NetConfig
@@ -50,17 +59,17 @@ patches:
     patch: |-
       - op: replace
         path: /spec/networks/0/dnsDomain
-        value: ctlplane.sandbox-jpvcx-ocp4-cluster.svc.cluster.local
+        value: ctlplane.sandbox-jrf5k-ocp4-cluster.svc.cluster.local
       - op: replace
         path: /spec/networks/1/dnsDomain
-        value: internalapi.sandbox-jpvcx-ocp4-cluster.svc.cluster.local
+        value: internalapi.sandbox-jrf5k-ocp4-cluster.svc.cluster.local
       - op: replace
         path: /spec/networks/2/dnsDomain
-        value: tenant.sandbox-jpvcx-ocp4-cluster.svc.cluster.local
+        value: tenant.sandbox-jrf5k-ocp4-cluster.svc.cluster.local
       - op: replace
         path: /spec/networks/3/dnsDomain
-        value: storage.sandbox-jpvcx-ocp4-cluster.svc.cluster.local
+        value: storage.sandbox-jrf5k-ocp4-cluster.svc.cluster.local
       - op: replace
         path: /spec/networks/4/dnsDomain
-        value: external.sandbox-jpvcx-ocp4-cluster.svc.cluster.local
+        value: external.sandbox-jrf5k-ocp4-cluster.svc.cluster.local
 

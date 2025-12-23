@@ -4,6 +4,8 @@ kind: PersistentVolumeClaim
 metadata:
   name: openstack-dataplane-ansible-log
   namespace: openstack
+  annotations:
+    argocd.argoproj.io/sync-options: SkipHealthCheck=true
 spec:
   accessModes:
     - ReadWriteOnce
